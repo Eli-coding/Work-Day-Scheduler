@@ -81,15 +81,38 @@
             <textarea class="description col-md-10"></textarea>
             <button class="btn saveBtn col-md-1"><i class="far fa-save"></i> </button>
 
-      
+        </div>
+
+
+        <div id="22" class="row time-block">
+            <div class="col-md-1 hour">10pm</div>
+            <textarea class="description col-md-10"></textarea>
+            <button class="btn saveBtn col-md-1"><i class="far fa-save"></i> </button>
+
+        </div>
+        <div id="23" class="row time-block">
+            <div class="col-md-1 hour">11pm</div>
+            <textarea class="description col-md-10"></textarea>
+            <button class="btn saveBtn col-md-1"><i class="far fa-save"></i> </button>
+
+        </div>
+
+
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="script.js"></script>
+
+        <!--calls the checkTime function -->
         <script>
             $(document).ready(function () {
                 checkTime();
-             });
+                // TODO: add to local stroage event. save event later when the button is click.
+                $(".saveBtn").click(function () {
+
+                    alert("Handler for click calls");
+                });
+            });
         </script>
 </body>
 
