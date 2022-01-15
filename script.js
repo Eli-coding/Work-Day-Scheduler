@@ -35,15 +35,25 @@ function checkTime() {
 
 
 //save button for that time block and text saved in local strorage
-$( ".btn saveBtn col-md-1" ).click(function() {
-    localstroage.setItem ("activitySaved", JSON.stringify (textarea)); 
-    var activitySaved = localstroage.getItem ("activitySaved");
+$( ".btn " ).click(function(event) {
+    event.preventDefault();
+   
+    console.log($(this))
+    console.log($(this).siblings()).val()
+    console.log($(this).parent())
     
+    var keyVar = $(".row"); //siblings
+    var inputVar = $(".description"); //parent
+
+    //local.storage.setItem ("keyVar", JSON.stringify (inputVar));
   
-  })
+  });
     
     
+  //1. Create a variable that targets the input value using $(this).siblings()  (as well as .val)
+ // 2. create a variable that targets the div id that holds your input and buttion.  That will be similar but using parents
+ // 3. save those to local storage localStorage.setItem( vorForID, varForInputValue)
 
-
-
+// localstroage.setItem ("activitySaved", JSON.stringify (textarea)); 
+    //var activitySaved = localstroage.getItem ("activitySaved");
 
