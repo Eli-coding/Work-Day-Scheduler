@@ -34,13 +34,16 @@ function checkTime() {
 }
 
 
+//save button for that time block and text saved in local strorage
+$( ".btn saveBtn col-md-1" ).click(function() {
+    localstroage.setItem ("activitySaved", JSON.stringify (textarea)); 
+    var activitySaved = localstroage.getItem ("activitySaved");
+    
+  
+  })
+    
+    
 
 
-/*
 
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
 
-*/
