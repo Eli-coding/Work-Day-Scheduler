@@ -39,23 +39,12 @@ $(".btn ").click(function (event) {
     event.preventDefault();
 
     var keyVar = $(this).parent("container"); //parent
-    var inputVar = $(this).siblings("textarea").val(); //siblings
+    var inputVar = $(this).siblings(".description").val(); //siblings
    
-    localStorage.setItem("keyVar", JSON.stringify(inputVar));
+    localStorage.setItem(keyVar, JSON.stringify(inputVar));
 
 });
 
 
-////
-           ///// <div class="col-md-1 hour">10pm</div>
-           ///// <textarea  class="description col-md-10"></textarea>
-           ///// <button class="btn saveBtn col-md-1"><i class="far fa-save"></i> </button>
 
-       ///// </div>
-       //// <div id="23" class="row time-block">
-           ///// <div class="col-md-1 hour">11pm</div>
-            ////<textarea  class="description col-md-10"></textarea>
-          ////  <button class="btn saveBtn col-md-1"><i class="far fa-save"></i> </button>
-
-    //   /// </div>
 
