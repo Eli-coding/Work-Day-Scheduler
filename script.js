@@ -38,14 +38,17 @@ function checkTime() {
 $( ".btn " ).click(function(event) {
     event.preventDefault();
    
-    console.log($(this))
-    console.log($(this).siblings()).val()
-    console.log($(this).parent())
+   // console.log($(this))
+    //console.log($(this).siblings())
+    //console.log($(this).parent())
     
-    var keyVar = $(".row"); //siblings
-    var inputVar = $(".description"); //parent
+  
+    var keyVar = $(this).parent("container"); //parent
+    var inputVar = $(this).siblings("textarea").val(); //siblings
+    console.log(keyVar);
+    console.log(inputVar);
 
-    //local.storage.setItem ("keyVar", JSON.stringify (inputVar));
+    localstorage.setItem(keyVar, inputVar);
   
   });
     
