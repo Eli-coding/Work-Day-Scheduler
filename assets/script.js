@@ -43,14 +43,12 @@ $(".btn ").click(function (event) {
     var inputVar = $(this).siblings('.description').val(); //siblings
 
     console.log($(this).siblings('.description').val());
-    localStorage.setItem(keyVarId, JSON.stringify(inputVar));
+    localStorage.setItem(keyVarId, inputVar);
 
 
 });
 
 
-//console.log(localStorage.getItem("9"));
-//console.log($("#9").children("textarea"));
 
 //items saved and persist after refreshing page.
 $("#9").children("textarea").val(localStorage.getItem("9"));
